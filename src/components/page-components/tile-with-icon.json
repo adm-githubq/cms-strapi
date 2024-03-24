@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_components_tile_with_icons",
+  "info": {
+    "displayName": "TileWithIcon",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TileDescription": {
+      "type": "string"
+    },
+    "TileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ServiceAddress": {
+      "type": "string"
+    }
+  }
+}

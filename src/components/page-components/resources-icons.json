@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_components_resources_icons",
+  "info": {
+    "displayName": "ToolsIcons",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IconName": {
+      "type": "string"
+    }
+  }
+}

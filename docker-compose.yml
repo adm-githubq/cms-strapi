@@ -1,0 +1,71 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: ${COMPOSE_PROJECT_NAME}_web
+    user: $CURRENT_UID
+    environment:
+      - DATABASE_CLIENT=postgres
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=$COMPOSE_PROJECT_NAME
+      - DATABASE_USERNAME=$COMPOSE_PROJECT_NAME
+      - DATABASE_PASSWORD=$COMPOSE_PROJECT_NAME
+      - DATABASE_SSL=false
+      - MEILI_MASTER_KEY=y_2rNdWO-e0KeNnpvPH29Hg-8DNtU8ap0wCPI496M-w
+      - MEILISEARCH_HOST=http://se:7700/
+      - HOME=/tmp
+    command:
+      - yarn
+      - develop
+    ports:
+      - ${DOCKER_PORT_WEB}:3000
+    working_dir: /usr/src/app
+    volumes:
+      - ${PROJECT_ROOT}:/usr/src/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:12.17
+    ports:
+      - ${DOCKER_PORT_DB}:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=$COMPOSE_PROJECT_NAME
+      - POSTGRES_USER=$COMPOSE_PROJECT_NAME
+      - POSTGRES_ROOT_PASSWORD=root
+      - POSTGRES_PASSWORD=$COMPOSE_PROJECT_NAME
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_INITDB_ARGS="-E UTF-8"
+      - PGUSER=$COMPOSE_PROJECT_NAME
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 1s
+      timeout: 60s
+      retries: 90
+      start_period: 15s
+
+  se:
+    image: getmeili/meilisearch:v1.6.0
+    environment:
+      - MEILI_MASTER_KEY=y_2rNdWO-e0KeNnpvPH29Hg-8DNtU8ap0wCPI496M-w
+      - MEILI_ENV=development
+    ports:
+      - ${DOCKER_PORT_SE}:7700
+    volumes:
+      - se-data:/meili_data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:7700"]
+      interval: 1s
+      timeout: 60s
+      retries: 90
+      start_period: 15s
+volumes:
+  db-data:
+  se-data:

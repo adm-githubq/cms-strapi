@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "resource_pages",
+  "info": {
+    "singularName": "resource-page",
+    "pluralName": "resource-pages",
+    "displayName": "Resource-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text"
+    }
+  }
+}

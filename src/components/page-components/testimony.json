@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_components_testimonies",
+  "info": {
+    "displayName": "Testimonial",
+    "icon": "quote",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TestimonialName": {
+      "type": "string"
+    },
+    "TestimonialLocation": {
+      "type": "string"
+    },
+    "TestimonialContents": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

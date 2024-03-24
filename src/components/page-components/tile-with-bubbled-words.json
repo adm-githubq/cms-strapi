@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_components_tile_with_bubbled_words",
+  "info": {
+    "displayName": "BubbledWords",
+    "icon": "discuss",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "BubbleContent": {
+      "type": "string"
+    }
+  }
+}

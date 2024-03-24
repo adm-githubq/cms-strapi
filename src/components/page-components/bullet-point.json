@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_components_bullet_points",
+  "info": {
+    "displayName": "BulletPoint",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "home-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderTitle": {
+      "type": "string"
+    },
+    "headingDescription": {
+      "type": "text"
+    },
+    "headingButtonSecondary": {
+      "type": "string"
+    },
+    "headingButtonPrimary": {
+      "type": "string"
+    },
+    "SecondSectionSectionTitle": {
+      "type": "string"
+    },
+    "HeadingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "TilesSectionTitle": {
+      "type": "string"
+    },
+    "Tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.tile-with-icon"
+    },
+    "ServicesTitle": {
+      "type": "string"
+    },
+    "ServicesDescription": {
+      "type": "string"
+    },
+    "ServicesTiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.tile-with-icon"
+    },
+    "ToolsSectionTitle": {
+      "type": "string"
+    },
+    "ToolsIcons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.resources-icons"
+    },
+    "ToolsButton": {
+      "type": "string"
+    },
+    "TestimonialsSectionTitle": {
+      "type": "string"
+    },
+    "Testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.testimony"
+    },
+    "ResourcesSectionTitle": {
+      "type": "string"
+    },
+    "ResourcesSectionSubtitle": {
+      "type": "string"
+    },
+    "ResourcesSectionButton": {
+      "type": "string"
+    },
+    "SecondSectionExpandable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.expandable"
+    },
+    "BubblesWithWords": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.tile-with-bubbled-words"
+    },
+    "PageTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text"
+    }
+  }
+}

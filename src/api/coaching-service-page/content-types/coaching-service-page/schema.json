@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "coaching_service_pages",
+  "info": {
+    "singularName": "coaching-service-page",
+    "pluralName": "coaching-service-pages",
+    "displayName": "Coaching-service-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text"
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "HeadingBodyCopy": {
+      "type": "text"
+    },
+    "HeadingImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "BulletPointsSectionTitle": {
+      "type": "string"
+    },
+    "BulletPoints": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.bullet-point"
+    },
+    "OtherServicesSectionTitle": {
+      "type": "string"
+    }
+  }
+}

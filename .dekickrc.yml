@@ -1,0 +1,27 @@
+dekick:
+  boilerplate: express/default
+  flavour: strapi
+  ports:
+    - port: 3000
+      service: web
+    - port: 5432
+      service: db
+    - port: 7700
+      service: se
+gitlab:
+  getenv: true
+  url: https://git.desmart.com/
+project:
+  artifacts:
+    - path: .yarn/cache
+    - path: .yarn/install-state.gz
+    - path: node_modules/
+  environments:
+    - name: test
+    - name: beta
+    - name: production
+  group: quantumadr
+  name: cms
+  providers:
+    credentials:
+      driver: gitlab
