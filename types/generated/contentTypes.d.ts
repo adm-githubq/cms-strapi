@@ -1127,6 +1127,44 @@ export interface ApiResourcePageResourcePage extends Schema.SingleType {
   };
 }
 
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Services';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageTitle: Attribute.String;
+    MetaDescription: Attribute.Text;
+    Heading: Attribute.String;
+    HeadingBodyCopy: Attribute.Text;
+    HeadingImage: Attribute.Media;
+    BulletPointsSectionTitle: Attribute.String;
+    BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
+    OtherServicesSectionTitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubscriberSubscriber extends Schema.CollectionType {
   collectionName: 'subscribers';
   info: {
@@ -1223,6 +1261,7 @@ declare module '@strapi/types' {
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::resource-label.resource-label': ApiResourceLabelResourceLabel;
       'api::resource-page.resource-page': ApiResourcePageResourcePage;
+      'api::service.service': ApiServiceService;
       'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
     }
