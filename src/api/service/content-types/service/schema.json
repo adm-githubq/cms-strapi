@@ -45,6 +45,10 @@
     },
     "OtherServicesSectionTitle": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }
