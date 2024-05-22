@@ -80,7 +80,11 @@ export interface PageComponentsTileWithIcon extends Schema.Component {
   attributes: {
     TileDescription: Attribute.String;
     TileImage: Attribute.Media;
-    ServiceAddress: Attribute.String;
+    Service: Attribute.Relation<
+      'page-components.tile-with-icon',
+      'oneToOne',
+      'api::service.service'
+    >;
   };
 }
 
