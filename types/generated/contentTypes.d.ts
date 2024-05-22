@@ -806,123 +806,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiCoParentingServicePageCoParentingServicePage
-  extends Schema.SingleType {
-  collectionName: 'co_parenting_service_pages';
-  info: {
-    singularName: 'co-parenting-service-page';
-    pluralName: 'co-parenting-service-pages';
-    displayName: 'CoParenting-service-page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    PageTitle: Attribute.String;
-    MetaDescription: Attribute.Text;
-    Heading: Attribute.String;
-    HeadingBodyCopy: Attribute.Text;
-    HeadingImage: Attribute.Media;
-    BulletPointsSectionTitle: Attribute.String;
-    BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
-    OtherServicesSectionTitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::co-parenting-service-page.co-parenting-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::co-parenting-service-page.co-parenting-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCoachingServicePageCoachingServicePage
-  extends Schema.SingleType {
-  collectionName: 'coaching_service_pages';
-  info: {
-    singularName: 'coaching-service-page';
-    pluralName: 'coaching-service-pages';
-    displayName: 'Coaching-service-page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    PageTitle: Attribute.String;
-    MetaDescription: Attribute.Text;
-    Heading: Attribute.String;
-    HeadingBodyCopy: Attribute.Text;
-    HeadingImage: Attribute.Media;
-    BulletPointsSectionTitle: Attribute.String;
-    BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
-    OtherServicesSectionTitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coaching-service-page.coaching-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coaching-service-page.coaching-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiDivorceServicePageDivorceServicePage
-  extends Schema.SingleType {
-  collectionName: 'divorce_service_pages';
-  info: {
-    singularName: 'divorce-service-page';
-    pluralName: 'divorce-service-pages';
-    displayName: 'Divorce-service-page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    PageTitle: Attribute.String;
-    MetaDescription: Attribute.Text;
-    Heading: Attribute.String;
-    HeadingBodyCopy: Attribute.Text;
-    HeadingImage: Attribute.Media;
-    BulletPointsSectionTitle: Attribute.String;
-    BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
-    OtherServicesSectionTitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::divorce-service-page.divorce-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::divorce-service-page.divorce-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
@@ -975,45 +858,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiMediationServicePageMediationServicePage
-  extends Schema.SingleType {
-  collectionName: 'mediation_service_pages';
-  info: {
-    singularName: 'mediation-service-page';
-    pluralName: 'mediation-service-pages';
-    displayName: 'Mediation-service-page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    PageTitle: Attribute.String;
-    MetaDescription: Attribute.Text;
-    Heading: Attribute.String;
-    HeadingBodyCopy: Attribute.Text;
-    HeadingImage: Attribute.Media;
-    BulletPointsSectionTitle: Attribute.String;
-    BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
-    OtherServicesSectionTitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::mediation-service-page.mediation-service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::mediation-service-page.mediation-service-page',
       'oneToOne',
       'admin::user'
     > &
@@ -1254,11 +1098,7 @@ declare module '@strapi/types' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::category.category': ApiCategoryCategory;
-      'api::co-parenting-service-page.co-parenting-service-page': ApiCoParentingServicePageCoParentingServicePage;
-      'api::coaching-service-page.coaching-service-page': ApiCoachingServicePageCoachingServicePage;
-      'api::divorce-service-page.divorce-service-page': ApiDivorceServicePageDivorceServicePage;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::mediation-service-page.mediation-service-page': ApiMediationServicePageMediationServicePage;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::resource-label.resource-label': ApiResourceLabelResourceLabel;
       'api::resource-page.resource-page': ApiResourcePageResourcePage;
