@@ -903,6 +903,37 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
   };
 }
 
+export interface ApiRedirectRedirect extends Schema.CollectionType {
+  collectionName: 'redirects';
+  info: {
+    singularName: 'redirect';
+    pluralName: 'redirects';
+    displayName: 'Redirects';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    origin_url: Attribute.String & Attribute.Required;
+    target_url: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::redirect.redirect',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::redirect.redirect',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiResourceLabelResourceLabel extends Schema.CollectionType {
   collectionName: 'resource_labels';
   info: {
@@ -1100,6 +1131,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
+      'api::redirect.redirect': ApiRedirectRedirect;
       'api::resource-label.resource-label': ApiResourceLabelResourceLabel;
       'api::resource-page.resource-page': ApiResourcePageResourcePage;
       'api::service.service': ApiServiceService;
