@@ -1041,6 +1041,40 @@ export interface ApiServiceService extends Schema.CollectionType {
   };
 }
 
+export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
+  collectionName: 'site_settings';
+  info: {
+    singularName: 'site-setting';
+    pluralName: 'site-settings';
+    displayName: 'Site Settings';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    services_menu_items: Attribute.Relation<
+      'api::site-setting.site-setting',
+      'oneToOne',
+      'api::service.service'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::site-setting.site-setting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::site-setting.site-setting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubscriberSubscriber extends Schema.CollectionType {
   collectionName: 'subscribers';
   info: {
@@ -1135,6 +1169,7 @@ declare module '@strapi/types' {
       'api::resource-label.resource-label': ApiResourceLabelResourceLabel;
       'api::resource-page.resource-page': ApiResourcePageResourcePage;
       'api::service.service': ApiServiceService;
+      'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::terms-of-service.terms-of-service': ApiTermsOfServiceTermsOfService;
     }
