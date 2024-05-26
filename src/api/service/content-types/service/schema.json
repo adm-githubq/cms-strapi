@@ -49,6 +49,9 @@
     "slug": {
       "type": "uid",
       "required": true
+    },
+    "menu_text": {
+      "type": "string"
     }
   }
 }

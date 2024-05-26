@@ -1023,6 +1023,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     BulletPoints: Attribute.Component<'page-components.bullet-point', true>;
     OtherServicesSectionTitle: Attribute.String;
     slug: Attribute.UID & Attribute.Required;
+    menu_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
