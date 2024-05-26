@@ -1047,6 +1047,7 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
     singularName: 'site-setting';
     pluralName: 'site-settings';
     displayName: 'Site Settings';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1054,7 +1055,7 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
   attributes: {
     services_menu_items: Attribute.Relation<
       'api::site-setting.site-setting',
-      'oneToOne',
+      'oneToMany',
       'api::service.service'
     >;
     createdAt: Attribute.DateTime;

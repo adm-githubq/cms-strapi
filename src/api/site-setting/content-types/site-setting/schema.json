@@ -4,7 +4,8 @@
   "info": {
     "singularName": "site-setting",
     "pluralName": "site-settings",
-    "displayName": "Site Settings"
+    "displayName": "Site Settings",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +14,7 @@
   "attributes": {
     "services_menu_items": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::service.service"
     }
   }
