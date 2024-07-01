@@ -1059,6 +1059,8 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
       'oneToMany',
       'api::service.service'
     >;
+    footer_socials: Attribute.Component<'global.socials', true>;
+    footer_disclaimer: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

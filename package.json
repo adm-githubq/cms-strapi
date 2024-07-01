@@ -21,6 +21,7 @@
     "@strapi/plugin-users-permissions": "4.15.5",
     "@strapi/provider-upload-aws-s3": "^4.17.1",
     "@strapi/strapi": "4.15.5",
+    "better-sqlite3": "^11.1.1",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

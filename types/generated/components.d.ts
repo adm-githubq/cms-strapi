@@ -1,5 +1,20 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface GlobalSocials extends Schema.Component {
+  collectionName: 'components_global_socials';
+  info: {
+    displayName: 'Socials';
+    icon: 'link';
+  };
+  attributes: {
+    platform: Attribute.Enumeration<
+      ['twitter', 'facebook', 'instagram', 'linkedin']
+    > &
+      Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface PageComponentsBulletPoint extends Schema.Component {
   collectionName: 'components_page_components_bullet_points';
   info: {
@@ -91,6 +106,7 @@ export interface PageComponentsTileWithIcon extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'global.socials': GlobalSocials;
       'page-components.bullet-point': PageComponentsBulletPoint;
       'page-components.expandable': PageComponentsExpandable;
       'page-components.resources-icons': PageComponentsResourcesIcons;

@@ -16,6 +16,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service"
+    },
+    "footer_socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.socials"
+    },
+    "footer_disclaimer": {
+      "type": "text"
     }
   }
 }
