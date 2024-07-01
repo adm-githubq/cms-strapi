@@ -48,7 +48,7 @@ export interface PageComponentsResourcesIcons extends Schema.Component {
     description: '';
   };
   attributes: {
-    Icon: Attribute.Media;
+    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     IconName: Attribute.String;
   };
 }
@@ -94,7 +94,7 @@ export interface PageComponentsTileWithIcon extends Schema.Component {
   };
   attributes: {
     TileDescription: Attribute.String;
-    TileImage: Attribute.Media;
+    TileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Service: Attribute.Relation<
       'page-components.tile-with-icon',
       'oneToOne',
