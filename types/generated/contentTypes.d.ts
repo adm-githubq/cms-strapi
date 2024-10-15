@@ -809,6 +809,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     Person2Name: Attribute.String;
     Person2Quote: Attribute.Text;
     Person2Description: Attribute.Text;
+    headingTagLines: Attribute.Component<'page-components.bullet-point', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -958,6 +959,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     >;
     PageTitle: Attribute.String;
     MetaDescription: Attribute.Text;
+    headerTagLines: Attribute.Component<'page-components.bullet-point', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1135,6 +1137,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     OtherServicesSectionTitle: Attribute.String;
     slug: Attribute.UID & Attribute.Required;
     menu_text: Attribute.String;
+    headingTagLines: Attribute.Component<'page-components.bullet-point', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -38,6 +38,11 @@
     },
     "Person2Description": {
       "type": "text"
+    },
+    "headingTagLines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.bullet-point"
     }
   }
 }

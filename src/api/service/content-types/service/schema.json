@@ -52,6 +52,11 @@
     },
     "menu_text": {
       "type": "string"
+    },
+    "headingTagLines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-components.bullet-point"
     }
   }
 }
