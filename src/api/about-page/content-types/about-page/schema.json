@@ -44,8 +44,7 @@
       "repeatable": true,
       "component": "page-components.bullet-point"
     },
-    "teamMember": {
-      "displayName": "Team Member",
+    "teamMembers": {
       "type": "component",
       "repeatable": true,
       "component": "page-components.team-member"
