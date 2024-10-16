@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_page_components_team_members",
+  "info": {
+    "displayName": "Team Member",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "Portrait left, text right",
+        "Text left, Portrait right"
+      ],
+      "default": "Portrait left, text right",
+      "required": true
+    }
+  }
+}

@@ -53,6 +53,27 @@ export interface PageComponentsResourcesIcons extends Schema.Component {
   };
 }
 
+export interface PageComponentsTeamMember extends Schema.Component {
+  collectionName: 'components_page_components_team_members';
+  info: {
+    displayName: 'Team Member';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    quote: Attribute.Text;
+    description: Attribute.Text;
+    linkedIn: Attribute.String;
+    portrait: Attribute.Media<'images'>;
+    layout: Attribute.Enumeration<
+      ['Portrait left, text right', 'Text left, Portrait right']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'Portrait left, text right'>;
+  };
+}
+
 export interface PageComponentsTestimony extends Schema.Component {
   collectionName: 'components_page_components_testimonies';
   info: {
@@ -110,6 +131,7 @@ declare module '@strapi/types' {
       'page-components.bullet-point': PageComponentsBulletPoint;
       'page-components.expandable': PageComponentsExpandable;
       'page-components.resources-icons': PageComponentsResourcesIcons;
+      'page-components.team-member': PageComponentsTeamMember;
       'page-components.testimony': PageComponentsTestimony;
       'page-components.tile-with-bubbled-words': PageComponentsTileWithBubbledWords;
       'page-components.tile-with-icon': PageComponentsTileWithIcon;

@@ -810,6 +810,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     Person2Quote: Attribute.Text;
     Person2Description: Attribute.Text;
     headingTagLines: Attribute.Component<'page-components.bullet-point', true>;
+    teamMember: Attribute.Component<'page-components.team-member', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
