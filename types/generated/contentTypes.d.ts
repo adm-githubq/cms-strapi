@@ -803,12 +803,6 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     PageTitle: Attribute.String;
     MetaDescription: Attribute.Text;
     Heading: Attribute.String;
-    Person1Name: Attribute.String;
-    Person1Quote: Attribute.Text;
-    Person1Description: Attribute.Text;
-    Person2Name: Attribute.String;
-    Person2Quote: Attribute.Text;
-    Person2Description: Attribute.Text;
     headingTagLines: Attribute.Component<'page-components.bullet-point', true>;
     teamMembers: Attribute.Component<'page-components.team-member', true>;
     createdAt: Attribute.DateTime;

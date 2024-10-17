@@ -21,24 +21,6 @@
     "Heading": {
       "type": "string"
     },
-    "Person1Name": {
-      "type": "string"
-    },
-    "Person1Quote": {
-      "type": "text"
-    },
-    "Person1Description": {
-      "type": "text"
-    },
-    "Person2Name": {
-      "type": "string"
-    },
-    "Person2Quote": {
-      "type": "text"
-    },
-    "Person2Description": {
-      "type": "text"
-    },
     "headingTagLines": {
       "type": "component",
       "repeatable": true,
