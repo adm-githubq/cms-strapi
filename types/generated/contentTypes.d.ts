@@ -1170,6 +1170,7 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
     >;
     footer_socials: Attribute.Component<'global.socials', true>;
     footer_disclaimer: Attribute.Text;
+    header_logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

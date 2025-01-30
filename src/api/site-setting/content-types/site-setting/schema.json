@@ -24,6 +24,16 @@
     },
     "footer_disclaimer": {
       "type": "text"
+    },
+    "header_logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
