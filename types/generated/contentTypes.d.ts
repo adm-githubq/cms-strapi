@@ -955,6 +955,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     PageTitle: Attribute.String;
     MetaDescription: Attribute.Text;
     headerTagLines: Attribute.Component<'page-components.bullet-point', true>;
+    main_heading: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1170,7 +1171,7 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
     >;
     footer_socials: Attribute.Component<'global.socials', true>;
     footer_disclaimer: Attribute.Text;
-    header_logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    site_logos: Attribute.Component<'global.website-logos'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

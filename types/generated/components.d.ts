@@ -15,6 +15,23 @@ export interface GlobalSocials extends Schema.Component {
   };
 }
 
+export interface GlobalWebsiteLogos extends Schema.Component {
+  collectionName: 'components_global_website_logos';
+  info: {
+    displayName: 'Website Logos';
+    icon: 'landscape';
+  };
+  attributes: {
+    mobile_logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    desktop_logo_light: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    desktop_logo_dark: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface PageComponentsBulletPoint extends Schema.Component {
   collectionName: 'components_page_components_bullet_points';
   info: {
@@ -128,6 +145,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'global.socials': GlobalSocials;
+      'global.website-logos': GlobalWebsiteLogos;
       'page-components.bullet-point': PageComponentsBulletPoint;
       'page-components.expandable': PageComponentsExpandable;
       'page-components.resources-icons': PageComponentsResourcesIcons;

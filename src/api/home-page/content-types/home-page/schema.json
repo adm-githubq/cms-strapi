@@ -105,6 +105,9 @@
       "type": "component",
       "repeatable": true,
       "component": "page-components.bullet-point"
+    },
+    "main_heading": {
+      "type": "string"
     }
   }
 }
