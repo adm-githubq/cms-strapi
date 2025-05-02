@@ -1,5 +1,20 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface GlobalLink extends Schema.Component {
+  collectionName: 'components_global_links';
+  info: {
+    displayName: 'Link';
+    icon: 'link';
+  };
+  attributes: {
+    Text: Attribute.String & Attribute.Required;
+    URL: Attribute.String & Attribute.Required;
+    External: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+  };
+}
+
 export interface GlobalSocials extends Schema.Component {
   collectionName: 'components_global_socials';
   info: {
@@ -144,6 +159,7 @@ export interface PageComponentsTileWithIcon extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'global.link': GlobalLink;
       'global.socials': GlobalSocials;
       'global.website-logos': GlobalWebsiteLogos;
       'page-components.bullet-point': PageComponentsBulletPoint;

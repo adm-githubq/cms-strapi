@@ -30,6 +30,11 @@
       "type": "component",
       "repeatable": false,
       "component": "global.website-logos"
+    },
+    "about_menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.link"
     }
   }
 }

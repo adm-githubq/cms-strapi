@@ -1172,6 +1172,7 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
     footer_socials: Attribute.Component<'global.socials', true>;
     footer_disclaimer: Attribute.Text;
     site_logos: Attribute.Component<'global.website-logos'>;
+    about_menu: Attribute.Component<'global.link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
