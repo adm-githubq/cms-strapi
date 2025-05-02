@@ -5,11 +5,12 @@ export interface GlobalLink extends Schema.Component {
   info: {
     displayName: 'Link';
     icon: 'link';
+    description: '';
   };
   attributes: {
-    Text: Attribute.String & Attribute.Required;
-    URL: Attribute.String & Attribute.Required;
-    External: Attribute.Boolean &
+    text: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+    external: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
   };

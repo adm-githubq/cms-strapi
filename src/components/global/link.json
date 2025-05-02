@@ -2,19 +2,20 @@
   "collectionName": "components_global_links",
   "info": {
     "displayName": "Link",
-    "icon": "link"
+    "icon": "link",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Text": {
+    "text": {
       "type": "string",
       "required": true
     },
-    "URL": {
+    "url": {
       "type": "string",
       "required": true
     },
-    "External": {
+    "external": {
       "type": "boolean",
       "default": false,
       "required": true
